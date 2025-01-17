@@ -46,10 +46,10 @@ function WeathCards() {
           </Button>
         </Form>
       </Row>
-
-      {weather && weather.list && (
-        <div>
-          {weather.list.slice(0, 5).map((forecast, index) => (
+      <Row>
+        {weather && weather.list && (
+         <div>
+            {weather.list.slice(0, 5).map((forecast, index) => (
               <Card style={{ width: "18rem" }} key={index} className="mt-4">
                 <Card.Img variant="top" src="holder.js/100px180" />
                 <Card.Body>
@@ -65,9 +65,10 @@ function WeathCards() {
                   </Card.Text>
                 </Card.Body>
               </Card>
-          ))}
+            ))}
         </div>
-      )}
+        )}
+      </Row>
     </Container>
   );
 }
