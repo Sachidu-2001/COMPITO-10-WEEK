@@ -67,7 +67,7 @@ function WeathCards() {
                       Umidity: {forecast.main.humidity} g/m3
                     </Card.Text>
                     <Card.Text className="text-black">
-                      Wind:{forecast.wind.speed} m/s
+                      Wind: {forecast.wind.speed} m/s
                     </Card.Text>
                   </Card.Body>
                 </Card>
