@@ -37,6 +37,7 @@ function WeathFooter() {
             </div>
           </div>
         </div>
+        <p className="m-auto text-center">The WeatherApp LLC 2025 - All Rights Reserved </p>
       </div>
     </Container>
     </div>
