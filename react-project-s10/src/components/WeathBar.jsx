@@ -1,11 +1,14 @@
-import { Navbar,Nav,Container } from "react-bootstrap"
-import * as Icon from 'react-bootstrap-icons'
+import { Navbar, Nav, Container } from "react-bootstrap";
+import * as Icon from "react-bootstrap-icons";
 
 function WeathBar() {
-    return(
-        <Navbar expand="lg" className="bg-primary">
+  return (
+    <Navbar expand="lg" className="bg-primary">
       <Container>
-        <Navbar.Brand href="#" className="text-white"><Icon.BrightnessHighFill /><h1>Te WeatherApp</h1></Navbar.Brand>
+        <Navbar.Brand href="#" className="d-flex text-white">
+          <Icon.BrightnessHighFill  />
+          <h1>The WeatherApp</h1>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse>
           <Nav className="me-auto">
@@ -16,7 +19,7 @@ function WeathBar() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    )
+  );
 }
 
 export default WeathBar;
