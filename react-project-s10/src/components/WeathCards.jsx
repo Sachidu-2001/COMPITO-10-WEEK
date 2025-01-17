@@ -51,7 +51,7 @@ function WeathCards() {
           <Row>
             {weather.list.slice(0, 6).map((forecast, index) => (
               <Col lg={4}>
-                <Card style={{ width: "18rem" }} key={index} className="mt-4">
+                <Card style={{ width: "18rem" }} key={index} className="mt-4 border-3 border-primary">
                   <Card.Body>
                     <Card.Title>{weather.city.name}</Card.Title>
                     <Card.Text className="text-black">
