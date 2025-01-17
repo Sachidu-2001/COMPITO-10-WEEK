@@ -8,32 +8,32 @@ function WeathFooter() {
         <div className="d-flex justify-content-center">
           <div className="d-flex">
             <div className="me-5">
-              <p>Valle D'Aosta</p>
-              <p>Piemonte</p>
-              <p>Liguria</p>
-              <p>Lombardia</p>
-              <p>Veneto</p> 
+              <p>Europe</p>
+              <p>Asia</p>
+              <p>Africa</p>
+              <p>America</p>
+              <p>Oceania</p> 
               </div>
               <div className="me-5">
-              <p>Trentino-Alto-Adige</p>
-              <p>Friuli-Venezia-Giulia</p>
-              <p>Toscana</p>
-              <p>Emilia-Romagna</p>
-              <p>Umbria</p>
+              <p>Italy</p>
+              <p>China</p>
+              <p>Morocco</p>
+              <p>Canada</p>
+              <p>Australia</p>
             </div>
             <div className="me-5">
-              <p>Marche</p>
-              <p>Abruzzo</p>
-              <p>Lazio</p>
-              <p>Campania</p>
-              <p>Molise</p>
+              <p>France</p>
+              <p>India</p>
+              <p>Congo</p>
+              <p>Messico</p>
+              <p>New Zeeland</p>
               </div>
               <div>
-              <p>Calabria</p>
-              <p>Puglia</p>
-              <p>Basilicata</p>
-              <p>Sicilia</p>
-              <p>Sardegna</p>
+              <p>Milan</p>
+              <p>Pechino</p>
+              <p>Cape Town</p>
+              <p>New York</p>
+              <p>Sidney</p>
             </div>
           </div>
         </div>

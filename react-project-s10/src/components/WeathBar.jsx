@@ -12,9 +12,9 @@ function WeathBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="ms-5">
           <Nav className="me-auto">
-            <Nav.Link href="#" className="text-white">Previsioni</Nav.Link>
-            <Nav.Link href="#" className="text-white">Regione</Nav.Link>
-            <Nav.Link href="#" className="text-white">Notizie</Nav.Link>
+            <Nav.Link href="#" className="text-white">Weather Forecast</Nav.Link>
+            <Nav.Link href="#" className="text-white">Country</Nav.Link>
+            <Nav.Link href="#" className="text-white">News</Nav.Link>
             <Nav.Link href="#" className="text-white">Info</Nav.Link>
           </Nav>
         </Navbar.Collapse>

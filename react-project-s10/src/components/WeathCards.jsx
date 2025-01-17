@@ -26,7 +26,7 @@ function WeathCards() {
   return (
     <Container className="mt-4 mb-5">
       <Row>
-        <h2>Trova le Previsioni della tua Città</h2>
+        <h2>Find the Weather Forecast of your City</h2>
         <Form onSubmit={handleSubmit} className="d-flex w-50">
           <Form.Group className="mb-3" controlId="cityName">
             <Form.Control
@@ -42,7 +42,7 @@ function WeathCards() {
             className="ms-4"
             style={{ height: "38px" }}
           >
-            Cerca
+            Search
           </Button>
         </Form>
       </Row>
@@ -55,19 +55,19 @@ function WeathCards() {
                   <Card.Body>
                     <Card.Title>{weather.city.name}</Card.Title>
                     <Card.Text className="text-black">
-                      Data e ora: {forecast.dt_txt}
+                      Date & Time: {forecast.dt_txt}
                     </Card.Text>
                     <Card.Text className="text-black">
-                      Temperatura: {forecast.main.temp} gradi
+                      Temperature: {forecast.main.temp} K degrees
                     </Card.Text>
                     <Card.Text className="text-black">
-                      Descrizione: {forecast.weather[0].description}
+                      Description: {forecast.weather[0].description}
                     </Card.Text>
                     <Card.Text className="text-black">
-                      Umidità: {forecast.main.humidity}
+                      Umidity: {forecast.main.humidity} g/m3
                     </Card.Text>
                     <Card.Text className="text-black">
-                      Vento:{forecast.wind.speed} m/s
+                      Wind:{forecast.wind.speed} m/s
                     </Card.Text>
                   </Card.Body>
                 </Card>
