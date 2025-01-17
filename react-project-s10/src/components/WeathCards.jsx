@@ -24,7 +24,7 @@ function WeathCards() {
   };
 
   return (
-    <Container className="mt-4">
+    <Container className="mt-4 mb-5">
       <Row>
         <h2>Trova le Previsioni della tua Città</h2>
         <Form onSubmit={handleSubmit} className="d-flex w-50">
@@ -48,25 +48,32 @@ function WeathCards() {
       </Row>
       <Row>
         {weather && weather.list && (
-         <div>
-            {weather.list.slice(0, 5).map((forecast, index) => (
-              <Card style={{ width: "18rem" }} key={index} className="mt-4">
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                  <Card.Title>{weather.city.name}</Card.Title>
-                  <Card.Text className="text-black">
-                    Data e ora: {forecast.dt_txt}
-                  </Card.Text>
-                  <Card.Text className="text-black">
-                    Temperatura: {forecast.main.temp} gradi
-                  </Card.Text>
-                  <Card.Text className="text-black">
-                    Vento:{forecast.wind.speed} m/s
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+          <Row>
+            {weather.list.slice(0, 6).map((forecast, index) => (
+              <Col lg={4}>
+                <Card style={{ width: "18rem" }} key={index} className="mt-4">
+                  <Card.Body>
+                    <Card.Title>{weather.city.name}</Card.Title>
+                    <Card.Text className="text-black">
+                      Data e ora: {forecast.dt_txt}
+                    </Card.Text>
+                    <Card.Text className="text-black">
+                      Temperatura: {forecast.main.temp} gradi
+                    </Card.Text>
+                    <Card.Text className="text-black">
+                      Descrizione: {forecast.weather[0].description}
+                    </Card.Text>
+                    <Card.Text className="text-black">
+                      Umidità: {forecast.main.humidity}
+                    </Card.Text>
+                    <Card.Text className="text-black">
+                      Vento:{forecast.wind.speed} m/s
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
             ))}
-        </div>
+          </Row>
         )}
       </Row>
     </Container>
