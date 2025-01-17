@@ -41,16 +41,20 @@ function WeathCards() {
       </Row>
 
       <Row>
-        {weather.list.map((element, indice) => (
-          <Card style={{ width: "18rem" }}>
+        {weather.list.map((forecast, index) => (
+          <Card style={{ width: "18rem" }} key={index} className='mt-4'>
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
-              <Card.Title></Card.Title>
+              <Card.Title>{weather.city.name}</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Data e ora: {forecast.dt_txt}
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Card.Text>
+                Temperatura: {forecast.main.temp} gradi
+              </Card.Text>
+              <Card.Text>
+                Vento:{forecast.wind.speed} m/s
+              </Card.Text>
             </Card.Body>
           </Card>
         ))}
