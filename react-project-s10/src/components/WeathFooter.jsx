@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 
 function WeathFooter() {
   return (
-    <div className="bg-primary">
+    <div className="bg-primary mt-5 ">
     <Container>
       <div>
         <div className="d-flex justify-content-center">
