@@ -6,10 +6,10 @@ function WeathCards() {
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
-    const findWeather = async (cityname) => {
+    const findWeather = async (cityName) => {
       try {
         const response = await fetch(
-          `api.openweathermap.org/data/2.5/forecast?q=${cityname}&appid=bbc6ad64da844d903705ded4dc362775`
+          `api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=bbc6ad64da844d903705ded4dc362775`
         );
         const data = await response.json();
         setCity(data.list ? data.list : []);
@@ -20,25 +20,28 @@ function WeathCards() {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      findWeather();
+      findWeather(city);
     };
   });
   return (
     <Container>
-        <Row>
-            <h2>Trova le Previsioni</h2>
-            <Form></Form>
-        </Row>
 
-
-
-
-
-
-
+    
+     <Row>
+        <h2>Trova le Previsioni</h2>
+       <Form onSubmit={handleSubmit}>
+          <Form.Group className="mb-3" controlId="cityName">
+            <Form.Label>Nome della Città</Form.Label>
+            <Form.Control type="text" placeholder="(Es.milano)" />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Button variant='primary' type='submit'>Cerca</Button>
+          </Form.Group>
+        </Form>
+      </Row>
 
       <Row>
-        {city.map((element) => (
+        {weather.list.map((element, indice) => (
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
